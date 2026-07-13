@@ -1,0 +1,11 @@
+services:
+  cap-theorem-simulator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cap-theorem-simulator
+    ports:
+      - "3000:3000"
+    environment:
+      PORT: 3000
+    restart: unless-stopped
